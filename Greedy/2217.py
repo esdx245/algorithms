@@ -3,6 +3,10 @@ lista = []
 for _ in range(n):
   lista.append(int(input()))
 lista.sort()
-for i in range(n):
-  lista[i] *= (n-i)
-print(max(lista))
+max = 0
+count = 0
+for i in range(len(lista)):
+  if (len(lista)-i) * lista[i] > max:
+    max = (len(lista)-i) * lista[i]
+    count = len(lista)-i
+print(int(max/count))
