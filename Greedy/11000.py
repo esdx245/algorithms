@@ -1,4 +1,6 @@
+import sys
 import heapq
+input = sys.stdin.readline
 case = int(input())
 q = []
 
@@ -17,5 +19,4 @@ for i in range(1, case):
     else:
         heapq.heappop(classs)
         heapq.heappush(classs, q[i][1])
-    print(classs)
 print(len(classs))
